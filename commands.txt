@@ -1,0 +1,6 @@
+cargo init
+cargo run
+cargo buid
+cargo build --release
+rustc main.rs
+./main
