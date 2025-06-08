@@ -1,6 +1,6 @@
-fn main() {
-    println!("Hello, world!");
-}
+// fn main() {
+//     println!("Hello, world!");
+// }
 
 // // variable
 // fn main_second() {
@@ -16,4 +16,19 @@ fn main() {
 //     }
 
 // }
+
+// even checking snake cases in used
+
+fn main(){
+    println!("{}",is_even(4));
+
+}
+
+fn is_even(n: i32) -> bool {
+    if n % 2 == 0 {
+       return true
+    } else {
+       return false
+    }
+}
 

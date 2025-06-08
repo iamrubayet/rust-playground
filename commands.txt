@@ -1,4 +1,5 @@
 cargo init
+cargo init --lib
 cargo run
 cargo buid
 cargo build --release
