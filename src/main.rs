@@ -144,6 +144,46 @@
 //     Rect::debug();
 // }
 
+// enum example
+
+// enum Direction {
+//     Up,
+//     Down,
+//     Left,
+//     Right,
+// }
+
+// fn main() {
+//     let my_direction = Direction::Up;
+//     let my_new_direction = my_direction;
+//     move_enum(my_new_direction);
+
+
+// }
+
+// fn move_enum(direction: Direction) {
+
+   
+// }
+
+
+enum Shape {
+    Circle(f64), // radius
+    Rectangle(f64, f64), // width, height
+}
+fn main() {
+    let my_shape = Shape::Circle(5.0);
+    let area = calculate_area(my_shape);
+    println!("The area of the shape is: {}", area);
+}
+
+fn calculate_area(shape: Shape) -> f64 {
+    match shape {
+        Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+        Shape::Rectangle(width, height) => width * height,
+    }
+}
+
 
 
  
