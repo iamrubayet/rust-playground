@@ -99,6 +99,47 @@
 // }
 
 
+// struct 
 
+struct User {
+    name: String,
+    age: u32,
+}
+
+struct Rect{
+    width: u32,
+    height: u32,
+}
+
+impl Rect {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main(){
+    let user1 = User {
+        name: String::from("Alice"),
+        age: 30,
+    };
+
+    let user2 = User {
+        name: String::from("Bob"),
+        age: 25,
+    };
+
+    println!("User 1: Name: {}, Age: {}", user1.name, user1.age);
+    println!("User 2: Name: {}, Age: {}", user2.name, user2.age);
+
+    let rect = Rect {
+        width: 10,
+        height: 5,
+    };
+    println!("Rectangle area: {}", rect.area());
+}
+
+
+
+ 
 
 
