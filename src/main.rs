@@ -63,4 +63,42 @@
 //     b
 // }
 
+// fn main() {
+//     let n = 10;
+//     println!("Fibonacci of {} is {}", n, fib(n));
+// }
+
+
+// fn fib(n:u32)->u32 {
+//     let mut first =0 ;
+//     let mut second = 1;
+//     if n == 0 {
+//         return first;
+//     }
+//     if n == 1{
+//         return second;
+//     }
+
+//     for _ in 0..(n-1){
+//         let temp = second;
+//         second = first + second;
+//         first = temp;
+//     }
+//     return second;
+// }
+
+
+// string manipulation
+// fn get_string_lenght(s: &str) -> usize {
+//     s.chars().count()
+// }
+// fn main() {
+//     let my_string = String::from("Hello, Rust!");
+//     let length = get_string_lenght(&my_string);
+//     println!("The length of the string is: {}", length);
+// }
+
+
+
+
 
