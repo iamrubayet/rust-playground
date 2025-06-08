@@ -19,16 +19,32 @@
 
 // even checking snake cases in used
 
-fn main(){
-    println!("{}",is_even(4));
+// fn main(){
+//     println!("{}",is_even(4));
 
+// }
+
+// fn is_even(n: i32) -> bool {
+//     if n % 2 == 0 {
+//        return true
+//     } else {
+//        return false
+//     }
+// }
+
+
+// fibonacci recurion
+
+fn main() {
+    let n = 10;
+    println!("Fibonacci of {} is {}", n, fibonacci(n));
 }
-
-fn is_even(n: i32) -> bool {
-    if n % 2 == 0 {
-       return true
+fn fibonacci(n: u32) -> u32 {
+    if n == 0 {
+        return 0;
+    } else if n == 1 {
+        return 1;
     } else {
-       return false
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
-
