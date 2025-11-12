@@ -162,20 +162,33 @@ use std::cmp::Ordering;
 
 // tuples
 
+// fn main() {
+
+//     let my_tuple: (i32, f64, u8) = (500, 6.4, 1);
+
+//     println!("first value: {}", my_tuple.0);
+//     println!("second value: {}", my_tuple.1);
+//     println!("third value: {}", my_tuple.2);
+
+
+
+//     let (x, y, z) = my_tuple;
+
+//     println!("x: {}", x);
+//     println!("y: {}", y);
+//     println!("z: {}", z);
+
+// }
+
+
+// strings 
+
+
 fn main() {
+    let mut str1 = String::new();
 
-    let my_tuple: (i32, f64, u8) = (500, 6.4, 1);
+   str1.push('a');
+   str1.push_str("bcdef");
 
-    println!("first value: {}", my_tuple.0);
-    println!("second value: {}", my_tuple.1);
-    println!("third value: {}", my_tuple.2);
-
-
-
-    let (x, y, z) = my_tuple;
-
-    println!("x: {}", x);
-    println!("y: {}", y);
-    println!("z: {}", z);
 
 }
