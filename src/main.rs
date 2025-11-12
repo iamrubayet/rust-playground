@@ -5,6 +5,7 @@ use rand::Rng;
 use std::io::{Write,BufRead,BufReader,ErrorKind};
 use std::fs::File;
 use std::cmp::Ordering;
+use std::ops::Add;
 
 
 // std library example
@@ -340,3 +341,15 @@ use std::cmp::Ordering;
 //     println!("The total sum of the list is: {}", total);
 
 // }
+
+
+
+fn get_sum<T: Add<Output = T>>(a: T, b: T) -> T {
+    a + b
+}
+
+
+// generics
+fn main() {
+
+}
