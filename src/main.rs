@@ -182,39 +182,68 @@ use std::cmp::Ordering;
 
 
 // strings 
-fn main() {
-  let mut str1 = String::new();
+// fn main() {
+//   let mut str1 = String::new();
 
-   str1.push('a');
-   str1.push_str("bcdef");
+//    str1.push('a');
+//    str1.push_str("bcdef");
 
-   for word in str1.split_whitespace() {
-       println!("{}", word);
-   }
+//    for word in str1.split_whitespace() {
+//        println!("{}", word);
+//    }
 
-   let str2 = str1.replace("bc", "12");
+//    let str2 = str1.replace("bc", "12");
 
-   let str3 = string::String::from("hello world");
+//    let str3 = string::String::from("hello world");
 
-   let mut v1 : Vec<char> = str3.chars().collect();
-    v1.sort();
-    v1.dedup();
-    for c in v1 {
-         println!("{}", c); 
-    }
+//    let mut v1 : Vec<char> = str3.chars().collect();
+//     v1.sort();
+//     v1.dedup();
+//     for c in v1 {
+//          println!("{}", c); 
+//     }
 
-    let str4 : &str = "hello world";
+//     let str4 : &str = "hello world";
 
-    let mut str5 : String = str4.to_string();
+//     let mut str5 : String = str4.to_string();
 
-    println!("str5: {}", str5);
+//     println!("str5: {}", str5);
 
-    let bytes = str5.as_bytes();
+//     let bytes = str5.as_bytes();
 
-    
+//     let str6 = &str5[0..5];
+
+//     str5.clear();
+
+
+//     let str7 = String::from("hello");
+//     let str8 = String::from("world");
+
+//     let str9 = str7 + &str8;
+
+//     for char in str9.chars() {
+//         println!("{}", char);
+//     }
+
+//     for char in str9.bytes() {
+//         println!("{}", char);
+//     }
 
 
 
 
 
+// }
+
+
+// casting
+
+fn main(){
+    let int_num: i32 = 65;
+    let float_num: f64 = int_num as f64;
+    let char_num: char = int_num as u8 as char;
+
+    println!("int_num: {}", int_num);
+    println!("float_num: {}", float_num);
+    println!("char_num: {}", char_num);
 }
