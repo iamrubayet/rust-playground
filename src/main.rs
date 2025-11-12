@@ -1,6 +1,6 @@
 #![allow(unused)]
 
-use std::io;
+use std::{io, string};
 use rand::Rng;
 use std::io::{Write,BufRead,BufReader,ErrorKind};
 use std::fs::File;
@@ -182,13 +182,39 @@ use std::cmp::Ordering;
 
 
 // strings 
-
-
 fn main() {
-    let mut str1 = String::new();
+  let mut str1 = String::new();
 
    str1.push('a');
    str1.push_str("bcdef");
+
+   for word in str1.split_whitespace() {
+       println!("{}", word);
+   }
+
+   let str2 = str1.replace("bc", "12");
+
+   let str3 = string::String::from("hello world");
+
+   let mut v1 : Vec<char> = str3.chars().collect();
+    v1.sort();
+    v1.dedup();
+    for c in v1 {
+         println!("{}", c); 
+    }
+
+    let str4 : &str = "hello world";
+
+    let mut str5 : String = str4.to_string();
+
+    println!("str5: {}", str5);
+
+    let bytes = str5.as_bytes();
+
+    
+
+
+
 
 
 }
