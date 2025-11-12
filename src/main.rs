@@ -46,5 +46,16 @@ use std::cmp::Ordering;
 
 // math
 fn main(){
-    
+    let num_5: u32 = 5;
+    let num_4: u32 = 4;
+    let sum = num_5 + num_4;
+    let difference = num_5 - num_4;
+    let product = num_5 * num_4;
+    let quotient = num_5 / num_4;
+    let remainder = num_5 % num_4;
+    println!("sum: {}", sum);
+    println!("difference: {}", difference);
+    println!("product: {}", product);
+    println!("quotient: {}", quotient);
+    println!("remainder: {}", remainder);
 }
