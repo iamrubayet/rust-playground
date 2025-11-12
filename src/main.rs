@@ -109,51 +109,73 @@ use std::cmp::Ordering;
 
 // array 
 
-fn main(){
-    let array1 = [1,2,3,4,5];
-    let array2: [i32;5] = [1,2,3,4,5];
-    let array3 = [3;5]; // all elements are 3 and length is 5
+// fn main(){
+//     let array1 = [1,2,3,4,5];
+//     let array2: [i32;5] = [1,2,3,4,5];
+//     let array3 = [3;5]; // all elements are 3 and length is 5
 
-    println!("first element of array1: {}", array1[0]);
-    println!("second element of array2: {}", array2[1]);
-    println!("third element of array3: {}", array3[2]);
+//     println!("first element of array1: {}", array1[0]);
+//     println!("second element of array2: {}", array2[1]);
+//     println!("third element of array3: {}", array3[2]);
 
-    // length of array
-    println!("length of array1: {}", array1.len());
+//     // length of array
+//     println!("length of array1: {}", array1.len());
 
-    let mut loop_index = 0; 
+//     let mut loop_index = 0; 
 
-    // looping through array using while
-    loop {
-        if array1[loop_index] % 2 == 0 {
-            println!("{} is even", array1[loop_index]);
-        } else {
-            println!("{} is odd", array1[loop_index]);
-        }
-        loop_index += 1;
-        if loop_index >= array1.len() {
-            break;
-        }
-    }
-
-
-    while loop_index < array2.len() {
-        if array2[loop_index] % 2 == 0 {
-            println!("{} is even", array2[loop_index]);
-        } else {
-            println!("{} is odd", array2[loop_index]);
-        }
-        loop_index += 1;
-    }
+//     // looping through array using while
+//     loop {
+//         if array1[loop_index] % 2 == 0 {
+//             println!("{} is even", array1[loop_index]);
+//         } else {
+//             println!("{} is odd", array1[loop_index]);
+//         }
+//         loop_index += 1;
+//         if loop_index >= array1.len() {
+//             break;
+//         }
+//     }
 
 
+//     while loop_index < array2.len() {
+//         if array2[loop_index] % 2 == 0 {
+//             println!("{} is even", array2[loop_index]);
+//         } else {
+//             println!("{} is odd", array2[loop_index]);
+//         }
+//         loop_index += 1;
+//     }
 
-    for val in array3.iter() {
-        if *val % 2 == 0 {
-            println!("{} is even", *val);
-        } else {
-            println!("{} is odd", *val);
-        }
-    }
+
+
+//     for val in array3.iter() {
+//         if *val % 2 == 0 {
+//             println!("{} is even", *val);
+//         } else {
+//             println!("{} is odd", *val);
+//         }
+//     }
+
+// }
+
+
+
+// tuples
+
+fn main() {
+
+    let my_tuple: (i32, f64, u8) = (500, 6.4, 1);
+
+    println!("first value: {}", my_tuple.0);
+    println!("second value: {}", my_tuple.1);
+    println!("third value: {}", my_tuple.2);
+
+
+
+    let (x, y, z) = my_tuple;
+
+    println!("x: {}", x);
+    println!("y: {}", y);
+    println!("z: {}", z);
 
 }
