@@ -238,12 +238,72 @@ use std::cmp::Ordering;
 
 // casting
 
-fn main(){
-    let int_num: i32 = 65;
-    let float_num: f64 = int_num as f64;
-    let char_num: char = int_num as u8 as char;
+// fn main(){
+//     let int_num: i32 = 65;
+//     let float_num: f64 = int_num as f64;
+//     let char_num: char = int_num as u8 as char;
 
-    println!("int_num: {}", int_num);
-    println!("float_num: {}", float_num);
-    println!("char_num: {}", char_num);
+//     println!("int_num: {}", int_num);
+//     println!("float_num: {}", float_num);
+//     println!("char_num: {}", char_num);
+// }
+
+
+// enums 
+
+// fn main() {
+//     enum Day {
+//         Monday,
+//         Tuesday,
+//         Wednesday,
+//         Thursday,
+//         Friday,
+//         Saturday,
+//         Sunday,
+//     }
+
+//     let today: Day = Day::Wednesday;
+
+//     match today {
+//         Day::Monday => println!("Today is Monday"),
+//         Day::Tuesday => println!("Today is Tuesday"),
+//         Day::Wednesday => println!("Today is Wednesday"),
+//         Day::Thursday => println!("Today is Thursday"),
+//         Day::Friday => println!("Today is Friday"),
+//         Day::Saturday => println!("Today is Saturday"),
+//         Day::Sunday => println!("Today is Sunday"),
+//     }
+// }
+
+
+// vectors
+
+fn main() {
+    let mut vec1: Vec<i32> = Vec::new();
+
+    vec1.push(1);
+    vec1.push(2);
+    vec1.push(3);
+    vec1.push(4);
+    vec1.push(5);
+
+    for val in vec1.iter() {
+        println!("{}", val);
+    }
+
+    for i in 0..vec1.len() {
+        println!("vec1[{}] = {}", i, vec1[i]);
+    }
+
+    vec1.pop();
+
+    for val in &vec1 {
+        println!("{}", val);
+    }
+
+    for val in vec1.iter_mut() {
+        *val *= 2;
+    }
+
+    
 }
