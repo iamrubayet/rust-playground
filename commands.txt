@@ -5,3 +5,4 @@ cargo buid
 cargo build --release
 rustc main.rs
 ./main
+cargo update
