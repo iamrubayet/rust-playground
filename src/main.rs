@@ -278,32 +278,65 @@ use std::cmp::Ordering;
 
 // vectors
 
-fn main() {
-    let mut vec1: Vec<i32> = Vec::new();
+// fn main() {
+//     let mut vec1: Vec<i32> = Vec::new();
 
-    vec1.push(1);
-    vec1.push(2);
-    vec1.push(3);
-    vec1.push(4);
-    vec1.push(5);
+//     vec1.push(1);
+//     vec1.push(2);
+//     vec1.push(3);
+//     vec1.push(4);
+//     vec1.push(5);
 
-    for val in vec1.iter() {
-        println!("{}", val);
-    }
+//     for val in vec1.iter() {
+//         println!("{}", val);
+//     }
 
-    for i in 0..vec1.len() {
-        println!("vec1[{}] = {}", i, vec1[i]);
-    }
+//     for i in 0..vec1.len() {
+//         println!("vec1[{}] = {}", i, vec1[i]);
+//     }
 
-    vec1.pop();
+//     vec1.pop();
 
-    for val in &vec1 {
-        println!("{}", val);
-    }
+//     for val in &vec1 {
+//         println!("{}", val);
+//     }
 
-    for val in vec1.iter_mut() {
-        *val *= 2;
-    }
+//     for val in vec1.iter_mut() {
+//         *val *= 2;
+//     }
 
-    
-}
+
+// }
+
+
+
+// functions 
+
+
+// fn sum (a: i32, b: i32) -> i32 {
+//     return a + b;
+// }
+
+
+// fn sum_list (list: &[i32]) -> i32 {
+//     let mut total = 0;
+//     for &val in list.iter() {
+//         total += val;
+//     }
+//     total
+// }
+
+
+// fn main(){
+//     let result = sum(5, 10);
+//     println!("The sum is: {}", result);
+
+
+//     let newlist = vec![1,2,3,4,5];
+//     let doubledlist: Vec<i32> = newlist.iter().map(|x| x * 2).collect();
+//     println!("Doubled list: {:?}", doubledlist);
+
+//     let total = sum_list(&newlist);
+//     println!("The total sum of the list is: {}", total);
+
+// }
