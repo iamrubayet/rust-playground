@@ -343,13 +343,17 @@ use std::ops::Add;
 // }
 
 
+// // generics example
+// fn get_sum<T: Add<Output = T>>(a: T, b: T) -> T {
+//     a + b
+// }
 
-fn get_sum<T: Add<Output = T>>(a: T, b: T) -> T {
-    a + b
-}
+// // generics
+// fn main() {
+//     let int_sum = get_sum(5, 10);
+//     println!("The sum of integers is: {}", int_sum);
 
+//     let float_sum = get_sum(5.5, 10.2);
+//     println!("The sum of floats is: {}", float_sum);
 
-// generics
-fn main() {
-
-}
+// }
