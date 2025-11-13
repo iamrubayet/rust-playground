@@ -448,5 +448,8 @@ fn main(){
     };
 
     println!("Name: {}, Balance: {}", customer1.name, customer1.balance);
+
+    customer1.balance += 500.0;
+    println!("Updated Balance: {}", customer1.balance);
 }
 
