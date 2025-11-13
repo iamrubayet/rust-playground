@@ -436,32 +436,80 @@ use std::collections::HashMap;
 
 
 // structs example
-struct Customer{
-    name: String,
-    balance: f64,
-}
+// struct Customer{
+//     name: String,
+//     balance: f64,
+// }
 
 
-struct Rectangle<T, U>{
-    width: T,
-    height: U,
-}
+// struct Rectangle<T, U>{
+//     width: T,
+//     height: U,
+// }
 
-fn main(){
-    let mut customer1 = Customer {
-        name: String::from("Alice"),
-        balance: 1000.0,
-    };
+// fn main(){
+//     let mut customer1 = Customer {
+//         name: String::from("Alice"),
+//         balance: 1000.0,
+//     };
 
-    println!("Name: {}, Balance: {}", customer1.name, customer1.balance);
+//     println!("Name: {}, Balance: {}", customer1.name, customer1.balance);
 
-    customer1.balance += 500.0;
-    println!("Updated Balance: {}", customer1.balance);
+//     customer1.balance += 500.0;
+//     println!("Updated Balance: {}", customer1.balance);
 
 
-    let rect1 = Rectangle {
-        width: 30,
-        height: 50,
-    };
+//     let rect1 = Rectangle {
+//         width: 30,
+//         height: 50,
+//     };
+
+
+//     trait  Shape {
+        
+//     }
+// }
+
+
+// trait 
+
+
+
+
+
+
+fn main() {
+
+
+    trait Shape {
+        fn new(width: f64, height: f64) -> Self;
+        fn area(&self) -> f64;
+    }
+
+    struct Rectangle {
+        width: f64,
+        height: f64,
+    }
+
+
+    impl Shape for Rectangle {
+        fn new(width: f64, height: f64) -> Rectangle {
+            Rectangle { width, height }
+        }
+
+        fn area(&self) -> f64 {
+            self.width * self.height
+        }
+
+    }
+
+    let rect1 = Rectangle::new(30.0, 50.0);
+    println!("Area of rectangle: {}", rect1.area());
+
+
+
+
+
+    
 }
 
