@@ -436,4 +436,17 @@ use std::collections::HashMap;
 
 
 // structs example
+struct Customer{
+    name: String,
+    balance: f64,
+}
+
+fn main(){
+    let mut customer1 = Customer {
+        name: String::from("Alice"),
+        balance: 1000.0,
+    };
+
+    println!("Name: {}, Balance: {}", customer1.name, customer1.balance);
+}
 
