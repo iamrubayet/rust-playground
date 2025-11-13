@@ -441,6 +441,12 @@ struct Customer{
     balance: f64,
 }
 
+
+struct Rectangle<T, U>{
+    width: T,
+    height: U,
+}
+
 fn main(){
     let mut customer1 = Customer {
         name: String::from("Alice"),
@@ -451,5 +457,11 @@ fn main(){
 
     customer1.balance += 500.0;
     println!("Updated Balance: {}", customer1.balance);
+
+
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
 }
 
