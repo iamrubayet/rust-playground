@@ -6,6 +6,7 @@ use std::io::{Write,BufRead,BufReader,ErrorKind};
 use std::fs::File;
 use std::cmp::Ordering;
 use std::ops::Add;
+use std::collections::HashMap;
 
 
 // std library example
@@ -360,35 +361,79 @@ use std::ops::Add;
 
 
 
-// Ownership and borrowing
-fn print_string(x: String) {
-    println!("The string is: {}", x);
-}
+// // Ownership and borrowing
+// fn print_string(x: String) {
+//     println!("The string is: {}", x);
+// }
 
-fn print_string_return(x: String) -> String {
-    println!("The string is: {}", x);
-    x
-}
+// fn print_string_return(x: String) -> String {
+//     println!("The string is: {}", x);
+//     x
+// }
 
-fn change_string(x: &mut String) {
-    x.push_str(" world");
-}
-
-
-// stack and heap example
-fn main(){
-    let str1 = String::from("hello");
-    let str2 = str1; // ownership moved to str2
-
-    println!("str2: {}", str2);
-    // println!("str1: {}", str1); // error: str1 is no longer
-
-    let str3 = str2.clone(); // deep copy
-
-    let mut str4 = String::from("hello");
-    change_string(&mut str4);
-    println!("str4: {}", str4);
-}
+// fn change_string(x: &mut String) {
+//     x.push_str(" world");
+// }
 
 
+// // stack and heap example
+// fn main(){
+//     let str1 = String::from("hello");
+//     let str2 = str1; // ownership moved to str2
+
+//     println!("str2: {}", str2);
+//     // println!("str1: {}", str1); // error: str1 is no longer
+
+//     let str3 = str2.clone(); // deep copy
+
+//     let mut str4 = String::from("hello");
+//     change_string(&mut str4);
+//     println!("str4: {}", str4);
+// }
+
+// // hashmaps example
+
+
+// fn main(){
+//     let mut heroes = HashMap::new();
+
+//     heroes.insert("Superman", "Clark Kent");
+//     heroes.insert("Batman", "Bruce Wayne");
+//     heroes.insert("Wonder Woman", "Diana Prince");
+
+
+//     for (hero, secret_identity) in &heroes {
+//         println!("{} is {}", hero, secret_identity);
+//     }
+
+
+//     for hero in heroes.keys() {
+//         println!("Hero: {}", hero);
+//     }
+
+//     for secret_identity in heroes.values() {
+//         println!("Secret Identity: {}", secret_identity);
+//     }
+
+
+//     for (hero, secret_identity) in heroes.iter() {
+//         println!("{} is {}", hero, secret_identity);
+//     }
+
+
+//     if heroes.contains_key("Batman") {
+//         let the_batman = heroes.get("Batman");
+//         match the_batman {
+//             Some(identity) => println!("Batman's secret identity is {}", identity),
+//             None => println!("No identity found"),
+//         }
+//     }
+// }
+
+
+
+
+
+
+// structs example
 
